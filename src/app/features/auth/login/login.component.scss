@@ -1,0 +1,24 @@
+
+:host {
+  display: flex;
+  height: 100%;
+
+  .c-panelLeft {
+    flex: 2 0 auto;
+    width: 30%;
+    background-image: url('../../../../assets/images/login.jpg');
+  }
+  
+  .c-panelRight {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+}

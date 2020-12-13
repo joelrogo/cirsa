@@ -1,0 +1,8 @@
+{
+  "email": "Correo",
+  "password": "Contraseña",
+  "is.required": "Este campo es requerido",
+  "email.valid.address": "Introduce una dirección valida",
+  "login.title": "Iniciar sesión",
+  "login.button": "Entrar"
+}

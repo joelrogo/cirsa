@@ -1,17 +1,19 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
-
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  ViewEncapsulation,
+} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'ng-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

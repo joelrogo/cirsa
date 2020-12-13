@@ -3,14 +3,26 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "paths": {
-      "@app/*": ["app/*"],
-      "@features/*": ["app/features/*"],
-      "@core/*": ["app/core/*"],
-      "@shared/*": ["app/shared/*"],
-      "@assets/*": ["assets/*"],
-      "@environments/*": ["environments/*"],
+      "@app/*": [
+        "app/*"
+      ],
+      "@features/*": [
+        "app/features/*"
+      ],
+      "@core/*": [
+        "app/core/*"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@environments/*": [
+        "environments/*"
+      ],
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -21,7 +33,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
       "es2018",
       "dom"
