@@ -1,4 +1,4 @@
-import { CdkPortal, CdkPortalOutlet } from '@angular/cdk/portal';
+import { PortalModule } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FooterComponent } from './components/footer/footer.component';
@@ -10,8 +10,8 @@ import { LayoutComponent } from './layout.component';
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
-    CdkPortalOutlet,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    PortalModule
   ]
 })
 export class LayoutModule {}
