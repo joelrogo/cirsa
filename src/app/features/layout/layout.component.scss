@@ -1,0 +1,16 @@
+@import "/src/scss/abstracts/colors";
+@import "/src/scss/abstracts/functions";
+
+.c-layout {
+  height: 100vh;
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  background-color: transparent;
+
+  .c-headerPortal,
+  .c-footerPortal {
+    padding: 0 rem(10px);
+    background-color: $primary-color;
+  }
+}

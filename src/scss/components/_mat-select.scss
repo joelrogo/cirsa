@@ -1,0 +1,27 @@
+@import "/src/scss/abstracts/functions";
+@import "/src/scss/abstracts/colors";
+
+
+mat-form-field {
+
+  mat-label {
+    color: $text-secondary-color;
+  }
+
+  ::ng-deep {
+    .mat-form-field-underline {
+      &::before {
+        background-color: $text-secondary-color;
+      }
+    }
+
+  }
+
+  ::ng-deep {
+    mat-select {
+      .mat-select-value-text {
+        color: $text-color;
+      }
+    }
+  }
+}

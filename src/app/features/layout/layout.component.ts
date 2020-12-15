@@ -2,17 +2,18 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, AfterVie
 import { ComponentPortal, Portal } from '@angular/cdk/portal';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'ng-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutComponent implements OnInit, AfterViewInit {
   headerPortal: ComponentPortal<HeaderComponent>;
   footerPortal: ComponentPortal<FooterComponent>;
+  openSidenav: boolean = false;
   
   constructor(private cd: ChangeDetectorRef) { }
 
@@ -23,6 +24,14 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     this.headerPortal = new ComponentPortal(HeaderComponent);
     this.footerPortal = new ComponentPortal(FooterComponent);
     this.cd.markForCheck();
+  }
+
+  openSidenavFn(): void {
+    if (!this.openSidenav) {
+      this.openSidenav = true;
+    } else {
+      this.openSidenav = false;
+    }
   }
 
 }

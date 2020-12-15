@@ -1,0 +1,28 @@
+<ng-container *transloco="let t">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer [opened]="openSidenav" (closedStart)="closedStartEvent()" mode="over" position="end">
+      <div>
+        <button mat-icon-button (click)="drawer.close()">
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>{{ t("select.an.option") }}</mat-label>
+          <mat-select value="es">
+            <mat-option value="es">{{ t("language.spanish") }}</mat-option>
+            <mat-option value="en">{{ t("language.english") }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <hr />
+      <div>
+        <a mat-button [routerLink]="'/games'"> {{ t("games") }} </a>
+        <a mat-button [routerLink]="'/games'"> {{ t("collect.coins") }} </a>
+      </div>
+    </mat-drawer>
+
+    <ng-content></ng-content>
+
+  </mat-drawer-container>
+</ng-container>

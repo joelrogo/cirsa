@@ -4,5 +4,10 @@
   "is.required": "This field is required",
   "email.valid.address": "Enter a valid email address",
   "login.title": "Log in",
-  "login.button": "Enter"
+  "login.button": "Enter",
+  "language.spanish": "Spanish",
+  "language.english": "English",
+  "games": "All games",
+  "collect.coins": "Collect coins",
+  "select.an.option": "Select an option"
 }

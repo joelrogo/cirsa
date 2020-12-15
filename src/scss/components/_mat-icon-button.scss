@@ -1,0 +1,17 @@
+@import "/src/scss/abstracts/functions";
+@import "/src/scss/abstracts/colors";
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  mat-icon {
+    color: $text-color;
+    font-size: rem(30px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -4,5 +4,10 @@
   "is.required": "Este campo es requerido",
   "email.valid.address": "Introduce una dirección valida",
   "login.title": "Iniciar sesión",
-  "login.button": "Entrar"
+  "login.button": "Entrar",
+  "language.spanish": "Español",
+  "language.english": "Inglés",
+  "games": "Todos los juegos",
+  "collect.coins": "Recoger monedas",
+  "select.an.option": "Selecciona una opción"
 }

@@ -1,0 +1,15 @@
+@import "/src/scss/abstracts/colors";
+@import "/src/scss/abstracts/functions";
+@import "/src/scss/components/mat-icon-button";
+
+.c-header {
+  flex: 2 0 auto;
+  height: rem(50px);
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+
+  .c-header__logo {
+    // background-image: url('/src/assets/images/logo.png');
+  }
+}

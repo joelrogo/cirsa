@@ -1,11 +1,16 @@
-<div class="layout">
-  <div class="c-headerPortal">
-    <ng-template [cdkPortalOutlet]="headerPortal"></ng-template>
-  </div>
+<ng-container *transloco="let t">
+  <div class="c-layout">
+    <ng-sidenav [openSidenav]="openSidenav" (closeSidenav)="openSidenavFn()">
+      <div class="c-headerPortal">
+        <ng-header (clickMenuEvent)="openSidenavFn()"></ng-header>
+      </div>
+  
+      <router-outlet></router-outlet>
+  
+      <div class="c-footerPortal">
+        <ng-template [cdkPortalOutlet]="footerPortal"></ng-template>
+      </div>
+    </ng-sidenav>
 
-  <router-outlet></router-outlet>
-
-  <div class="c-footerPortal">
-    <ng-template [cdkPortalOutlet]="footerPortal"></ng-template>
   </div>
-</div>
+</ng-container>
