@@ -5,8 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: (): any =>
-      import('@features/auth/auth.module').then(
-        (load) => load.AuthModule
+      import('@app/features/layout/layout.module').then(
+        (load) => load.LayoutModule
       ),
   },
   {
@@ -23,7 +23,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      relativeLinkResolution: 'legacy',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

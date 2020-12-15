@@ -1,13 +1,17 @@
+import { CdkPortal, CdkPortalOutlet } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
-  ],
+    CdkPortalOutlet,
+    LayoutRoutingModule
+  ]
 })
 export class LayoutModule {}

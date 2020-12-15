@@ -1,1 +1,10 @@
-<p>layout works!</p>
+<div class="layout">
+  <div class="c-headerPortal">
+    <ng-template [cdkPortalOutlet]="componentPortal"></ng-template>
+  </div>
+  <!-- <ng-header></ng-header> -->
+
+  <router-outlet></router-outlet>
+
+  <ng-footer></ng-footer>
+</div>
