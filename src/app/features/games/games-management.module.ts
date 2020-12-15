@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 
 import { GameModule } from './components/game/game.module';
+import { GamesFiltersModule } from './components/games-filters/games-filters.module';
 import { GamesManagementHomeComponent } from './games-home.component';
 import { GamesManagementRoutingModule } from './games-management-routing.module';
 import { GamesManagementComponent } from './games-management.component';
@@ -12,6 +13,7 @@ import { GamesManagementComponent } from './games-management.component';
   imports: [
     CommonModule,
     GamesManagementRoutingModule,
+    GamesFiltersModule,
     GameModule,
     SharedModule,
   ],

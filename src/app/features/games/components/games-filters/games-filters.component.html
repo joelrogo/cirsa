@@ -1,0 +1,21 @@
+<ng-container *transloco="let t">
+  <div class="c-gamesFilters">
+    <mat-form-field appearance="fill">
+      <mat-icon matPrefix>search</mat-icon>
+      <input
+        matInput
+        type="search"
+        [placeholder]="t('search.game')"
+        class="search-input"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{ t("order.by") }}</mat-label>
+      <mat-select>
+        <mat-option value="level">{{ t("level") }}</mat-option>
+        <mat-option value="color">{{ t("color") }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</ng-container>

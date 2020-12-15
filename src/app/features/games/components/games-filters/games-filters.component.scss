@@ -1,0 +1,13 @@
+@import "/src/scss/abstracts/colors";
+@import "/src/scss/abstracts/functions";
+@import "/src/scss/components/mat-select";
+
+.c-gamesFilters {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  mat-icon {
+    margin-right: rem(5px);
+  }
+}

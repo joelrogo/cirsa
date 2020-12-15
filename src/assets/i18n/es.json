@@ -9,5 +9,9 @@
   "language.english": "Inglés",
   "games": "Todos los juegos",
   "collect.coins": "Recoger monedas",
-  "select.an.option": "Selecciona una opción"
+  "select.an.option": "Selecciona una opción",
+  "search.game": "Buscar juego...",
+  "order.by": "Ordenar por:",
+  "level": "Nivel",
+  "color": "Color"
 }

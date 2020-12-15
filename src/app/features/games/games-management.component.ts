@@ -4,7 +4,6 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
   selector: 'ng-games-management',
   templateUrl: './games-management.component.html',
   styleUrls: ['./games-management.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GamesManagementComponent implements OnInit {
