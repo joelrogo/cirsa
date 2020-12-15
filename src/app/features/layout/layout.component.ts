@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
-import { ComponentPortal } from '@angular/cdk/portal';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { ComponentPortal, Portal } from '@angular/cdk/portal';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'ng-layout',
@@ -9,16 +10,19 @@ import { HeaderComponent } from './components/header/header.component';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LayoutComponent implements OnInit {
-  componentPortal: ComponentPortal<HeaderComponent>;
-
-  constructor() { }
+export class LayoutComponent implements OnInit, AfterViewInit {
+  headerPortal: ComponentPortal<HeaderComponent>;
+  footerPortal: ComponentPortal<FooterComponent>;
+  
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit() {
-    this.componentPortal = new ComponentPortal(HeaderComponent);
+    this.headerPortal = new ComponentPortal(HeaderComponent);
+    this.footerPortal = new ComponentPortal(FooterComponent);
+    this.cd.markForCheck();
   }
 
 }
