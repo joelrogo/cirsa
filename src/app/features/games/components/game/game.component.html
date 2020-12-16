@@ -1,6 +1,10 @@
 <ng-container *transloco="let t">
   <div class="c-game">
-    <ng-card *ngFor="let game of games" [cardTitle]="game.type.name" (cardClick)="openGame(game)">
+    <ng-card
+      *ngFor="let game of games"
+      [cardTitle]="game.type.name"
+      (cardClick)="cardClick(game)"
+    >
       {{ game.name }}
     </ng-card>
   </div>

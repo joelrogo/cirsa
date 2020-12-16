@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CollectCoinsComponent } from './components/collect-coins/collect-coins.component';
+import { GameDetailComponent } from './components/game/game-detail/game-detail.component';
 import { GameComponent } from './components/game/game.component';
 
 import { GamesManagementHomeComponent } from './games-home.component';
@@ -17,9 +18,7 @@ const routes: Routes = [
       },
       {
         path: 'game/:id',
-        component: GameComponent,
-        loadChildren: (): any =>
-          import('@app/features/games/components/game/game.module').then((load) => load.GameModule),
+        component: GameDetailComponent,
       },
       {
         path: 'collect-coins',

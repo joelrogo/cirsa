@@ -2,8 +2,10 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  EventEmitter,
   Input,
   OnInit,
+  Output,
   ViewEncapsulation,
 } from '@angular/core';
 import { GameModel } from '@app/core/models/game.model';
@@ -17,6 +19,7 @@ import { GameModel } from '@app/core/models/game.model';
 })
 export class GameComponent implements OnInit {
   @Input() games: GameModel[];
+  @Output() openGame: EventEmitter<GameModel> = new EventEmitter<GameModel>();
 
   constructor(private cd: ChangeDetectorRef) {}
 
@@ -27,7 +30,7 @@ export class GameComponent implements OnInit {
     }, 0);
   }
 
-  openGame(game: GameModel): void {
-    console.log("Open ", game);
+  cardClick(game: GameModel): void {
+    this.openGame.emit(game);
   }
 }

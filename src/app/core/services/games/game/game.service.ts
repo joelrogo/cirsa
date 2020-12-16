@@ -9,7 +9,6 @@ export class GameService {
   constructor(private httpClient: HttpClient) {}
 
   getAllGames(): Observable<GameModel[]> {
-    return this.httpClient
-      .get<any>('/assets/json/gamesMock.json');
+    return this.httpClient.get<GameModel[]>('/assets/json/gamesMock.json');
   }
 }

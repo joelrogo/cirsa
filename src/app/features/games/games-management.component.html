@@ -6,6 +6,7 @@
   </div>
 
   <div class="c-gamesManagement__games">
-    <ng-game [games]="games$ | async"></ng-game>
+    <ng-game [games]="games$ | async" (openGame)="goToGame($event)"></ng-game>
   </div>
+
 </div>
