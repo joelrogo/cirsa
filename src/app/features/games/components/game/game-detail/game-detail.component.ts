@@ -7,7 +7,7 @@ import {
 import {
   ActivatedRoute
 } from '@angular/router';
-import { GameService } from '@app/core/services/game.service';
+import { GamesService } from '@app/core/services/games.service';
 
 @Component({
   selector: 'ng-game-detail',
@@ -20,18 +20,13 @@ export class GameDetailComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private gameService: GameService,
+    private gamesService: GamesService,
     private cd: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params.id;
-    const allGames = this.gameService.getAllGames();
-
-    allGames.subscribe(games => {
-      const findGameById = games.find(game => game.id === id);
-      this.title = findGameById.name;
-      this.cd.markForCheck();
-    });
+    this.title = this.gamesService.getGameById(id).name;
+    this.cd.detectChanges();
   }
 }

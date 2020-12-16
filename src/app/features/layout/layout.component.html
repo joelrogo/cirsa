@@ -4,12 +4,14 @@
       <div class="c-headerPortal">
         <ng-header (clickMenuEvent)="openSidenavFn()"></ng-header>
       </div>
+      
+      <div class="c-content">
+        <router-outlet></router-outlet>
+      </div>
   
-      <router-outlet></router-outlet>
-  
-      <!-- <div class="c-footerPortal">
+      <div class="c-footerPortal">
         <ng-template [cdkPortalOutlet]="footerPortal"></ng-template>
-      </div> -->
+      </div>
     </ng-sidenav>
 
   </div>

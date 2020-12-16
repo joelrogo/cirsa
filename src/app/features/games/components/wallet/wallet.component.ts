@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { WalletService } from '@app/core/services/wallet.service';
 
 @Component({
   selector: 'ng-wallet',
@@ -7,13 +8,15 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WalletComponent implements OnInit {
-  @Input() coinsToAdd: number = 0;
-  public coins: number = 100000000;
+  public coins: number = null;
 
-  constructor() { }
+  constructor(private walletService: WalletService, private cd: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.coins = this.coins + this.coinsToAdd;
+    this.walletService.observWallet().subscribe(wallet => {
+      this.coins = wallet.coins;
+      this.cd.detectChanges();
+    })
   }
 
 }

@@ -1,11 +1,11 @@
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef, Component,
+  Component,
   OnInit
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { GameModel } from '@app/core/models/game.model';
-import { GameService } from '@app/core/services/game.service';
+import { Game, Games } from '@app/core/models/game.model';
+import { GamesService } from '@app/core/services/games.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -15,14 +15,13 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesManagementComponent implements OnInit {
-  public games$: Observable<GameModel[]> = this.gameService.getAllGames();
+  public games$: Observable<Game[]> = this.gamesService.observGamesState();
   public searchText: string;
   public selectValue: number;
 
   constructor(
-    private gameService: GameService,
-    private cd: ChangeDetectorRef,
-    private router: Router
+    private gamesService: GamesService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -36,7 +35,7 @@ export class GamesManagementComponent implements OnInit {
     this.selectValue = selectValue;
   }
 
-  goToGame(game: GameModel): void {
+  goToGame(game: Game): void {
     this.router.navigate(['games/game/' + game.id]);
   }
 }

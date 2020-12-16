@@ -3,7 +3,8 @@
 @import "/src/scss/components/mat-icon-button";
 
 mat-drawer-container {
-  height: 100%;
+  height: inherit;
+  min-height: 100vh;
 
   mat-drawer {
     display: flex;
@@ -34,6 +35,18 @@ mat-drawer-container {
     hr {
       margin: 30px 0;
       border-color: $text-color;
+    }
+  }
+
+  ::ng-deep .mat-drawer-content {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .c-content {
+      display: flex;
+      flex: 2 1 auto;
     }
   }
 }
