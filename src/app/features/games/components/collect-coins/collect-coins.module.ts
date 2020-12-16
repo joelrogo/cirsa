@@ -1,19 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
-import { GameComponent } from './game.component';
+import { CollectCoinsComponent } from './collect-coins.component';
 import { MatCardModule } from '@angular/material/card'
 
 import { CardModule } from '@app/shared/components/card/card.module';
 
 @NgModule({
-  declarations: [GameComponent],
+  declarations: [CollectCoinsComponent],
   imports: [
     CommonModule,
-    MatCardModule,
-    CardModule,
     SharedModule
   ],
-  exports: [GameComponent]
+  exports: [CollectCoinsComponent]
 })
-export class GameModule {}
+export class CollectCoinsModule {}

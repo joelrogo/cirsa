@@ -1,1 +1,7 @@
-<p>game works!</p>
+<ng-container *transloco="let t">
+  <div class="c-game">
+    <ng-card *ngFor="let game of games" [cardTitle]="game.type.name" (cardClick)="openGame(game)">
+      {{ game.name }}
+    </ng-card>
+  </div>
+</ng-container>

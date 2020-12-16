@@ -1,4 +1,7 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { GameModel } from '@app/core/models/game.model';
+import { GameService } from '@app/core/services/games/game/game.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ng-games-management',
@@ -7,10 +10,12 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GamesManagementComponent implements OnInit {
+  public games$: Observable<GameModel[]>;
 
-  constructor() { }
+  constructor(private gameService: GameService, private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
+    this.games$ = this.gameService.getAllGames();
   }
 
 }

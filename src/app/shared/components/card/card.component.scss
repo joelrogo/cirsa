@@ -1,0 +1,22 @@
+@import "/src/scss/abstracts/colors";
+@import "/src/scss/abstracts/functions";
+
+.c-card {
+  max-width: 250px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: $card-color;
+
+  .c-card__header {
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .c-card__content {
+    padding: 10px;
+    background-color: $secondary-color;
+    margin: 10px;
+    border-radius: inherit;
+  }
+}

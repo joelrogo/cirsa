@@ -5,7 +5,8 @@
 .c-gamesFilters {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: rem(10px) rem(400px);
 
   mat-icon {
     margin-right: rem(5px);

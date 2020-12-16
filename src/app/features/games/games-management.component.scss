@@ -5,11 +5,13 @@
   width: 100%;
 
   .c-gamesManagement {
+    height: 100%;
   
     .c-gamesManagement__banner {
       height: 340px;
-      background-color: black;
-      // background-image: url('/src/assets/images/banner.png');
+      background-image: url('/assets/images/banner.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .c-gamesManagement__filters,
