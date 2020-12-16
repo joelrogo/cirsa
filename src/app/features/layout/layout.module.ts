@@ -11,6 +11,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { WalletModule } from '../games/components/wallet/wallet.module';
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent, SidenavComponent],
@@ -21,6 +22,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatSidenavModule,
     MatSelectModule,
     MatIconModule,
+    WalletModule,
     SharedModule,
   ],
 })

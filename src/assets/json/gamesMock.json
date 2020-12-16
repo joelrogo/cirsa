@@ -3,12 +3,12 @@
     "id": "5fd92e9eee87336eaf4fed6e",
     "name": "Tiki Tumble",
     "type": {
-      "id": 0,
+      "id": 1,
       "name": "Novedad"
     },
     "color": {
-      "id": 0,
-      "name": "Azul"
+      "id": 1,
+      "name": "Rosa"
     },
     "image": "logo.png"
   },
@@ -16,12 +16,25 @@
     "id": "5fd951c773aa9ebd86557317",
     "name": "Tiki Tumble 2",
     "type": {
-      "id": 0,
+      "id": 1,
       "name": "Novedad"
     },
     "color": {
-      "id": 0,
-      "name": "Azul"
+      "id": 1,
+      "name": "Rosa"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f5c60daed263a277bd6b",
+    "name": "Tiki Tumble 3",
+    "type": {
+      "id": 1,
+      "name": "Novedad"
+    },
+    "color": {
+      "id": 1,
+      "name": "Rosa"
     },
     "image": ""
   },
@@ -29,11 +42,37 @@
     "id": "5fd92febc621600d1f8496e1",
     "name": "Ruleta Europea",
     "type": {
-      "id": 1,
+      "id": 2,
       "name": "Ruleta"
     },
     "color": {
-      "id": 1,
+      "id": 2,
+      "name": "Rojo"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f5d0f1ba77d87e6c2b93",
+    "name": "Ruleta Francesa",
+    "type": {
+      "id": 2,
+      "name": "Ruleta"
+    },
+    "color": {
+      "id": 2,
+      "name": "Rojo"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f5d94c4747668b9e0b66",
+    "name": "Ruleta Americana",
+    "type": {
+      "id": 2,
+      "name": "Ruleta"
+    },
+    "color": {
+      "id": 2,
       "name": "Rojo"
     },
     "image": ""
@@ -42,11 +81,50 @@
     "id": "5fd9303cf96e2f413d537494",
     "name": "Tragaperras",
     "type": {
-      "id": 2,
+      "id": 3,
       "name": "Jackpots"
     },
     "color": {
-      "id": 2,
+      "id": 3,
+      "name": "Oro"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f5f921d569a3f50b5bf6",
+    "name": "Tragaperras 2",
+    "type": {
+      "id": 3,
+      "name": "Jackpots"
+    },
+    "color": {
+      "id": 3,
+      "name": "Oro"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f5fd88298f1a3cd50c2d",
+    "name": "Tragaperras 3",
+    "type": {
+      "id": 3,
+      "name": "Jackpots"
+    },
+    "color": {
+      "id": 3,
+      "name": "Oro"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f601a4c6a1360d914ed6",
+    "name": "Tragaperras 4",
+    "type": {
+      "id": 3,
+      "name": "Jackpots"
+    },
+    "color": {
+      "id": 3,
       "name": "Oro"
     },
     "image": ""

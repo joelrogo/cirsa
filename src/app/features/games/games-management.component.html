@@ -2,11 +2,11 @@
   <div class="c-gamesManagement__banner"></div>
 
   <div class="c-gamesManagement__filters">
-    <ng-games-filters></ng-games-filters>
+    <ng-games-filters (searchTextChanged)="filterSearch($event)" (selectOptionChanged)="filterOption($event)"></ng-games-filters>
   </div>
 
   <div class="c-gamesManagement__games">
-    <ng-game [games]="games$ | async" (openGame)="goToGame($event)"></ng-game>
+    <ng-game [games]="(games$ | async) | filterByName: searchText | filterByTypeId: selectValue" (openGame)="goToGame($event)"></ng-game>
   </div>
 
 </div>

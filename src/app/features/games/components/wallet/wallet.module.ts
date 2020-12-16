@@ -1,18 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '@app/shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
 
-import { CollectCoinsComponent } from './collect-coins.component';
-
+import { WalletComponent } from './wallet.component';
 
 @NgModule({
-  declarations: [CollectCoinsComponent],
+  declarations: [WalletComponent],
   imports: [
     CommonModule,
     MatIconModule,
     SharedModule
   ],
-  exports: [CollectCoinsComponent]
+  exports: [WalletComponent]
 })
-export class CollectCoinsModule {}
+export class WalletModule {}

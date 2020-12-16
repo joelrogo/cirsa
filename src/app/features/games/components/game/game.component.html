@@ -3,9 +3,12 @@
     <ng-card
       *ngFor="let game of games"
       [cardTitle]="game.type.name"
+      [cardBackground]="'assets/images/tiki_tumble.png'"
       (cardClick)="cardClick(game)"
     >
-      {{ game.name }}
+
+    <span>{{ game.name }}</span>
+
     </ng-card>
   </div>
 </ng-container>

@@ -14,7 +14,6 @@ import { GameModel } from '@app/core/models/game.model';
   selector: 'ng-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GameComponent implements OnInit {

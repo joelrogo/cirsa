@@ -4,11 +4,11 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Input, E
   selector: 'ng-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent implements OnInit {
   @Input() cardTitle: string;
+  @Input() cardBackground: string;
   @Output() cardClick: EventEmitter<CardComponent> = new EventEmitter<CardComponent>();
 
   constructor() { }

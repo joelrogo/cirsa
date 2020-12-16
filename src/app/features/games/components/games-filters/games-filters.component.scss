@@ -1,14 +1,27 @@
 @import "/src/scss/abstracts/colors";
 @import "/src/scss/abstracts/functions";
 @import "/src/scss/components/mat-select";
+@import "/src/scss/components/input";
 
 .c-gamesFilters {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: rem(10px) rem(400px);
+  padding: rem(20px);
+  max-width: rem(800px);
+  margin: 0 auto;
+  flex-wrap: wrap;
 
   mat-icon {
     margin-right: rem(5px);
+  }
+
+  @media only screen and (max-width: 575px) {
+    justify-content: center;
+
+    mat-form-field {
+      width: 100%;
+
+    }
   }
 }

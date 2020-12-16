@@ -1,0 +1,14 @@
+
+
+.c-footer {
+  display: flex;
+  height: 100%;
+  flex: 2 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}

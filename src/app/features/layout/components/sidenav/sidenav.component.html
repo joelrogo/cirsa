@@ -9,16 +9,16 @@
       <div>
         <mat-form-field appearance="fill">
           <mat-label>{{ t("select.an.option") }}</mat-label>
-          <mat-select value="es">
-            <mat-option value="es">{{ t("language.spanish") }}</mat-option>
-            <mat-option value="en">{{ t("language.english") }}</mat-option>
+          <mat-select [formControl]="lang">
+            <mat-option value="es" (click)="drawer.close()">{{ t("language.spanish") }}</mat-option>
+            <mat-option value="en" (click)="drawer.close()">{{ t("language.english") }}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
       <hr />
       <div>
-        <a mat-button [routerLink]="'/games'"> {{ t("games") }} </a>
-        <a mat-button [routerLink]="'/games/collect-coins'"> {{ t("collect.coins") }} </a>
+        <a mat-button [routerLink]="'/games'" (click)="drawer.close()"> {{ t("games") }} </a>
+        <a mat-button [routerLink]="'/games/collect-coins'" (click)="drawer.close()"> {{ t("collect.coins") }} </a>
       </div>
     </mat-drawer>
 

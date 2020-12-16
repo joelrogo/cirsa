@@ -7,7 +7,7 @@ import {
 import {
   ActivatedRoute
 } from '@angular/router';
-import { GameService } from '@app/core/services/games/game/game.service';
+import { GameService } from '@app/core/services/game.service';
 
 @Component({
   selector: 'ng-game-detail',

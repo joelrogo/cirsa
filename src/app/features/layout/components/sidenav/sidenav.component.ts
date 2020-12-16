@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, ViewChild, Output, EventEmitter } from '@angular/core';
-import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
+import { FormControl } from '@angular/forms';
+import { MatDrawer } from '@angular/material/sidenav';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'ng-sidenav',
@@ -12,9 +14,14 @@ export class SidenavComponent implements OnInit {
   @Output() closeSidenav = new EventEmitter<boolean>();
   @ViewChild(MatDrawer) drawer: MatDrawer;
 
-  constructor() { }
+  public lang: FormControl = new FormControl('es');
+
+  constructor(private translocoService: TranslocoService) { }
 
   ngOnInit(): void {
+    this.lang.valueChanges.subscribe(() => {
+      this.translocoService.setActiveLang(this.lang.value);
+    });
   }
 
   closedStartEvent(): void {

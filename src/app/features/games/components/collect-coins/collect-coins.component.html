@@ -1,1 +1,8 @@
-<p>collect-coins works!</p>
+<ng-container *transloco="let t">
+  <div class="c-collectCoins">
+    <h1>{{ t("collect.coins") }}</h1>
+    <div [ngClass]="addClass ? 'c-collectCoins__coin--collecting' : ''" class="c-collectCoins__coin" (click)="coinClick()">
+      <mat-icon svgIcon="coin-base"></mat-icon>
+    </div>
+  </div>
+</ng-container>

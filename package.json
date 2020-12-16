@@ -23,6 +23,7 @@
     "@angular/platform-browser": "~11.1.0-next.2",
     "@angular/platform-browser-dynamic": "~11.1.0-next.2",
     "@angular/router": "~11.1.0-next.2",
+    "@datorama/akita": "^5.3.0",
     "@ngneat/transloco": "^2.19.3",
     "@ngneat/transloco-locale": "^1.4.0",
     "http-parser-js": "^0.5.2",

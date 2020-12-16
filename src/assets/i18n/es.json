@@ -13,5 +13,9 @@
   "search.game": "Buscar juego...",
   "order.by": "Ordenar por:",
   "level": "Nivel",
-  "color": "Color"
+  "color": "Color",
+  "all": "Todos",
+  "novelties": "Novedades",
+  "roulettes": "Ruletas",
+  "jackpots": "Jackpots"
 }

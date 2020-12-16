@@ -1,15 +1,15 @@
 import { SelectItemIdName } from './generic.model';
 
 export enum GAME_COLORS {
-  BLUE = 0,
-  RED = 1,
-  GOLD = 2
+  PINK = 1,
+  RED = 2,
+  GOLD = 3
 }
 
 export enum GAME_TYPES {
-  NOVELTY = 0,
-  ROULETTE = 1,
-  JACKPOT = 2
+  NOVELTY = 1,
+  ROULETTE = 2,
+  JACKPOT = 3
 }
 
 export interface GameModel {

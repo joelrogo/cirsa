@@ -4,17 +4,20 @@
       <mat-icon matPrefix>search</mat-icon>
       <input
         matInput
-        type="search"
+        type="text"
         [placeholder]="t('search.game')"
+        [formControl]="searchText"
         class="search-input"
       />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>{{ t("order.by") }}</mat-label>
-      <mat-select>
-        <mat-option value="level">{{ t("level") }}</mat-option>
-        <mat-option value="color">{{ t("color") }}</mat-option>
+      <mat-select [formControl]="selectOption">
+        <mat-option [value]="0">{{ t("all") }}</mat-option>
+        <mat-option [value]="gameTypes.NOVELTY">{{ t("novelties") }}</mat-option>
+        <mat-option [value]="gameTypes.ROULETTE">{{ t("roulettes") }}</mat-option>
+        <mat-option [value]="gameTypes.JACKPOT">{{ t("jackpots") }}</mat-option>
       </mat-select>
     </mat-form-field>
   </div>

@@ -6,7 +6,7 @@
 
   .c-gamesManagement {
     height: 100%;
-  
+
     .c-gamesManagement__banner {
       height: 340px;
       background-image: url('/assets/images/banner.jpg');
@@ -18,6 +18,10 @@
     .c-gamesManagement__filters,
     .c-gamesManagement__games {
       background-color: $primary-color-background;
+    }
+
+    .c-gamesManagement__games {
+      display: flex;
     }
   }
 }

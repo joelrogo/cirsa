@@ -1,0 +1,23 @@
+@import "/src/scss/abstracts/colors";
+@import "/src/scss/abstracts/functions";
+
+.c-wallet {
+  display: flex;
+
+  .c-wallet__input {
+    background-color: $primary-color-background;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+  &::before {
+    content: ' ';
+    background-image: url('/assets/images/coin.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+    transform: translateX(20px);
+  }
+}
