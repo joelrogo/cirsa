@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CollectCoinsComponent } from './components/collect-coins/collect-coins.component';
 import { GameDetailComponent } from './components/game/game-detail/game-detail.component';
-import { GameComponent } from './components/game/game.component';
-
 import { GamesManagementHomeComponent } from './games-home.component';
 import { GamesManagementComponent } from './games-management.component';
+
 
 const routes: Routes = [
   {
@@ -19,13 +18,16 @@ const routes: Routes = [
       {
         path: 'game/:id',
         component: GameDetailComponent,
-        data: {animation: 'GameDetail'},
+        data: { animation: 'GameDetail' },
       },
       {
         path: 'collect-coins',
         component: CollectCoinsComponent,
         loadChildren: (): any =>
-          import('@app/features/games/components/collect-coins/collect-coins.module').then((load) => load.CollectCoinsModule),
+          import(
+            '@app/features/games/components/collect-coins/collect-coins.module'
+          ).then((load) => load.CollectCoinsModule),
+        data: { animation: 'CollectCoins' },
       },
     ],
   },

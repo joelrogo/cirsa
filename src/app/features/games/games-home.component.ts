@@ -1,12 +1,17 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { slideInAnimation } from './games-route-animation';
+import { routeAnimations } from '../../animations/route-animations';
 
 @Component({
   selector: 'ng-games-management-home',
   template: `
-    <div [@routeAnimations]="o && o.activatedRouteData 
-        && o.activatedRouteData['animation']">
-      <router-outlet #o="outlet"></router-outlet>
+    <div
+      [@routeAnimations]="
+        router &&
+        router.activatedRouteData &&
+        router.activatedRouteData['animation']
+      "
+    >
+      <router-outlet #router="outlet"></router-outlet>
     </div>
   `,
   styles: [
@@ -19,7 +24,7 @@ import { slideInAnimation } from './games-route-animation';
       }
     `,
   ],
-  animations: [ slideInAnimation ],
+  animations: [routeAnimations],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesManagementHomeComponent {}

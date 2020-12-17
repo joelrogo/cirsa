@@ -13,28 +13,15 @@
     "image": "logo.png"
   },
   {
-    "id": "5fd951c773aa9ebd86557317",
-    "name": "Tiki Tumble 2",
+    "id": "5fd9303cf96e2f413d537494",
+    "name": "Tragaperras",
     "type": {
-      "id": 1,
-      "name": "Novedad"
+      "id": 3,
+      "name": "Jackpots"
     },
     "color": {
-      "id": 1,
-      "name": "Rosa"
-    },
-    "image": ""
-  },
-  {
-    "id": "5fd9f5c60daed263a277bd6b",
-    "name": "Tiki Tumble 3",
-    "type": {
-      "id": 1,
-      "name": "Novedad"
-    },
-    "color": {
-      "id": 1,
-      "name": "Rosa"
+      "id": 3,
+      "name": "Oro"
     },
     "image": ""
   },
@@ -65,28 +52,28 @@
     "image": ""
   },
   {
-    "id": "5fd9f5d94c4747668b9e0b66",
-    "name": "Ruleta Americana",
+    "id": "5fd951c773aa9ebd86557317",
+    "name": "Tiki Tumble 2",
     "type": {
-      "id": 2,
-      "name": "Ruleta"
+      "id": 1,
+      "name": "Novedad"
     },
     "color": {
-      "id": 2,
-      "name": "Rojo"
+      "id": 1,
+      "name": "Rosa"
     },
     "image": ""
   },
   {
-    "id": "5fd9303cf96e2f413d537494",
-    "name": "Tragaperras",
+    "id": "5fd9f5c60daed263a277bd6b",
+    "name": "Tiki Tumble 3",
     "type": {
-      "id": 3,
-      "name": "Jackpots"
+      "id": 1,
+      "name": "Novedad"
     },
     "color": {
-      "id": 3,
-      "name": "Oro"
+      "id": 1,
+      "name": "Rosa"
     },
     "image": ""
   },
@@ -100,6 +87,19 @@
     "color": {
       "id": 3,
       "name": "Oro"
+    },
+    "image": ""
+  },
+  {
+    "id": "5fd9f5d94c4747668b9e0b66",
+    "name": "Ruleta Americana",
+    "type": {
+      "id": 2,
+      "name": "Ruleta"
+    },
+    "color": {
+      "id": 2,
+      "name": "Rojo"
     },
     "image": ""
   },

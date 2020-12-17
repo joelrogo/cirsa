@@ -15,6 +15,7 @@ const routes: Routes = [
       import('@core/components/not-found/not-found.module').then(
         (load) => load.NotFoundModule
       ),
+    data: { animation: "NotFound" }
   },
   {
     path: '**',
