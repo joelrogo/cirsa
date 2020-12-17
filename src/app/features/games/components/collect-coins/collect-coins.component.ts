@@ -14,12 +14,13 @@ import { WalletComponent } from '../wallet/wallet.component';
 })
 export class CollectCoinsComponent implements OnInit {
   @ViewChild(WalletComponent) wallet: WalletComponent;
-  public show = false;
+  public animate = false;
+  public generatedCoins = 0;
 
   constructor(
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer,
-    private walletStore: WalletStore
+    private walletStore: WalletStore,
   ) {}
 
   ngOnInit(): void {
@@ -29,13 +30,13 @@ export class CollectCoinsComponent implements OnInit {
     );
   }
 
-  get stateName() {
-    return this.show ? 'show' : 'hide'
+  coinClick(): void {
+    this.animate = !this.animate;
+    this.generatedCoins = Math.floor(Math.random() * 3500 + 1500);
+    this.walletStore.addCoins(this.generatedCoins);
   }
 
-  coinClick(): void {
-    this.show = !this.show;
-    const generatedCoins = Math.floor(Math.random() * 3500 + 1500);
-    this.walletStore.addCoins(generatedCoins);
+  animationEnds(event): void {
+    this.animate = false;
   }
 }

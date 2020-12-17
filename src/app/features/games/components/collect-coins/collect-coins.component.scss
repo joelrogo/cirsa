@@ -22,19 +22,21 @@
   .c-collectCoins__coin {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: rem(30px);
 
     mat-icon {
-      width: 100px;
-      height: 100px;
+      width: rem(100px);
+      height: rem(100px);
       cursor: pointer;
       animation: coinBasicAnimation 2s infinite;
     }
 
-    &.c-collectCoins__coin--collecting {
-      animation: coinCollectAnimation 3s forwards;
+    span {
+      margin-top: rem(10px);
+      font-weight: bold;
     }
   }
 }
@@ -50,24 +52,5 @@
 
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes coinCollectAnimation {
-  0% {
-    transform: translateY(0) rotateY(360deg);
-  }
-
-  90% {
-    filter: brightness(1.4);
-  }
-
-  99% {
-    transform: translateY(-300px);
-  }
-
-  100% {
-    transform: translateY(-300px) scale(0);
-    filter: brightness(1.4);
   }
 }
