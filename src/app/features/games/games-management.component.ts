@@ -4,15 +4,16 @@ import {
   OnInit
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { Game, Games } from '@app/core/models/game.model';
+import { Game } from '@app/core/models/game.model';
 import { GamesService } from '@app/core/services/games.service';
 import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'ng-games-management',
   templateUrl: './games-management.component.html',
   styleUrls: ['./games-management.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GamesManagementComponent implements OnInit {
   public games$: Observable<Game[]> = this.gamesService.observGamesState();
@@ -26,6 +27,7 @@ export class GamesManagementComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
   filterSearch(searchText: string) {
     this.searchText = searchText;

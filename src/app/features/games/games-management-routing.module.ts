@@ -19,6 +19,7 @@ const routes: Routes = [
       {
         path: 'game/:id',
         component: GameDetailComponent,
+        data: {animation: 'GameDetail'},
       },
       {
         path: 'collect-coins',

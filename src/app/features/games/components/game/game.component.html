@@ -1,14 +1,13 @@
 <ng-container *transloco="let t">
   <div class="c-game">
     <ng-card
+      [@EnterLeave]
       *ngFor="let game of games"
       [cardTitle]="game.type.name"
       [cardBackground]="'assets/images/tiki_tumble.png'"
       (cardClick)="cardClick(game)"
     >
-
-    <span>{{ game.name }}</span>
-
+      <span>{{ game.name }}</span>
     </ng-card>
   </div>
 </ng-container>
