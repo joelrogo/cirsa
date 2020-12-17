@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { FooterComponent } from '@app/features/layout/components/footer/footer.component';
 
 @Component({
   selector: 'ng-not-found',
@@ -7,10 +9,16 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NotFoundComponent implements OnInit {
-
-  constructor() { }
+  footerPortal: ComponentPortal<FooterComponent>;
+  
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterContentChecked() {
+    this.footerPortal = new ComponentPortal(FooterComponent);
+    this.cd.markForCheck();
   }
 
 }

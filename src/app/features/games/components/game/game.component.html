@@ -1,5 +1,5 @@
 <ng-container *transloco="let t">
-  <div class="c-game">
+  <div class="c-game" *ngIf="games && games.length">
     <ng-card
       [@EnterLeave]
       *ngFor="let game of games"

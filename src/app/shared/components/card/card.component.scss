@@ -8,17 +8,17 @@
 .c-card {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  max-width: rem(250px);
   width: 100%;
-  border-radius: 15px;
+  border-radius: rem(15px);
   background-color: $card-color;
-  margin: 10px;
-  padding: 10px;
+  margin: rem(10px);
+  padding: rem(10px);
   cursor: pointer;
 
   .c-card__header {
     text-align: center;
-    padding-top: 5px;
+    padding-top: rem(5px);
   }
 
   .c-card__content {
@@ -26,17 +26,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: rem(10px);
     background-color: $secondary-color;
-    margin: 0 10px 10px 10px;
+    margin: 0 rem(10px) rem(10px) rem(10px);
     border-radius: inherit;
 
     .c-card__contentImage {
-      width: 100px;
-      height: 100px;
+      width: 100%;
+      max-width: rem(100px);
+      height: rem(100px);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      margin-top: rem(5px);
     }
   }
 }

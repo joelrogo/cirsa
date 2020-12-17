@@ -18,13 +18,15 @@ import { routeAnimations } from '../../animations/route-animations';
     `
       :host,
       div {
+        position: relative;
         flex: 2 0 auto;
         width: 100%;
         display: flex;
+        overflow-x: hidden;
+        flex-direction: column;
       }
     `,
   ],
   animations: [routeAnimations],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesManagementHomeComponent {}

@@ -18,6 +18,7 @@ const routes: Routes = [
           import('@app/features/games/games-management.module').then(
             (load) => load.GamesManagementModule
           ),
+        data: { animation: 'Games' },
       },
     ],
   },

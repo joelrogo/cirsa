@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, AfterViewInit, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { ComponentPortal, Portal } from '@angular/cdk/portal';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -10,8 +10,7 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./layout.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LayoutComponent implements OnInit, AfterViewInit {
-  headerPortal: ComponentPortal<HeaderComponent>;
+export class LayoutComponent implements OnInit, AfterContentChecked {
   footerPortal: ComponentPortal<FooterComponent>;
   openSidenav: boolean = false;
   
@@ -20,8 +19,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-    this.headerPortal = new ComponentPortal(HeaderComponent);
+  ngAfterContentChecked() {
     this.footerPortal = new ComponentPortal(FooterComponent);
     this.cd.markForCheck();
   }

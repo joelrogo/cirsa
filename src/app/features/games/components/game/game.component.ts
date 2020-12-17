@@ -17,11 +17,11 @@ import { Game, Games } from '@app/core/models/game.model';
   animations: [
     trigger('EnterLeave', [
       transition(':enter', [
-        style({ transform: 'scale(0.5)', opacity: 1 }),
-        animate('0.5s ease'),
+        style({ position: 'relative', transform: 'scale(0.5)', opacity: 1 }),
+        animate('0.3s ease'),
       ]),
       transition(':leave', [
-        animate('0.3s ease', style({ transform: 'scale(0)', opacity: 1 })),
+        animate('0.3s ease', style({ transform: 'scale(0)', opacity: 1, position: 'relative' })),
       ]),
     ]),
   ],

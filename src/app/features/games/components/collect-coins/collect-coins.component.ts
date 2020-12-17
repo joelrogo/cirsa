@@ -1,10 +1,8 @@
-import {
-  Component,
-  OnInit,
-  ViewChild
-} from '@angular/core';
+import { flatten } from '@angular/compiler';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { collectCoinsAnimation } from '@app/animations/collect-coins-animations';
 import { WalletStore } from '@app/core/stores/wallet.store';
 import { WalletComponent } from '../wallet/wallet.component';
 
@@ -12,10 +10,11 @@ import { WalletComponent } from '../wallet/wallet.component';
   selector: 'ng-collect-coins',
   templateUrl: './collect-coins.component.html',
   styleUrls: ['./collect-coins.component.scss'],
+  animations: [collectCoinsAnimation]
 })
 export class CollectCoinsComponent implements OnInit {
   @ViewChild(WalletComponent) wallet: WalletComponent;
-  public addClass = false;
+  public show = false;
 
   constructor(
     private iconRegistry: MatIconRegistry,
@@ -30,9 +29,13 @@ export class CollectCoinsComponent implements OnInit {
     );
   }
 
+  get stateName() {
+    return this.show ? 'show' : 'hide'
+  }
+
   coinClick(): void {
-    this.addClass = true;
-    const generatedCoins = Math.floor((Math.random() * 3500) + 1500);
+    this.show = !this.show;
+    const generatedCoins = Math.floor(Math.random() * 3500 + 1500);
     this.walletStore.addCoins(generatedCoins);
   }
 }

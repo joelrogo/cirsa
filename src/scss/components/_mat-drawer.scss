@@ -5,12 +5,14 @@
 mat-drawer-container {
   height: inherit;
   min-height: 100vh;
+  overflow-x: hidden;
 
   mat-drawer {
     display: flex;
     flex-direction: column;
     padding: rem(20px);
     background-color: $secondary-color;
+    overflow-x: hidden;
 
     div {
       display: flex;
@@ -43,6 +45,7 @@ mat-drawer-container {
     height: auto;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 
     .c-content {
       display: flex;
