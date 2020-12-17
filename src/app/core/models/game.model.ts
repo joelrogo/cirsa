@@ -10,7 +10,7 @@ export enum GAME_COLORS {
 export enum GAME_TYPES {
   NOVELTY = 1,
   ROULETTE = 2,
-  JACKPOT = 3,
+  SLOT = 3,
 }
 
 export interface Game {

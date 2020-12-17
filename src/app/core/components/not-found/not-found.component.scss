@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+
+  .c-notFound {
+    flex: 2 0 auto;
+    width: 100%;
+    justify-content: center;
+    background-image: url('/assets/images/404.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

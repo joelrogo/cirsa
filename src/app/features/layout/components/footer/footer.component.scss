@@ -1,4 +1,9 @@
+@import "/src/scss/abstracts/colors";
+@import "/src/scss/abstracts/functions";
 
+:host {
+  width: 100%;
+}
 
 .c-footer {
   display: flex;
@@ -6,6 +11,8 @@
   flex: 2 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: rem(10px);
+  background-color: $primary-color;
 
   div {
     display: flex;

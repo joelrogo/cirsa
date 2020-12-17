@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Game, Games } from '@app/core/models/game.model';
+import { TranslocoService } from '@ngneat/transloco';
 import { Observable } from 'rxjs';
 import { GamesQuery } from '../queries/games.query';
 import { GamesStore } from '../stores/games.store';

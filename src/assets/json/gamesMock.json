@@ -8,26 +8,26 @@
     },
     "color": {
       "id": 1,
-      "name": "Rosa"
+      "name": "red"
     },
-    "image": "logo.png"
+    "image": "tiki_tumble"
   },
   {
     "id": "5fd9303cf96e2f413d537494",
-    "name": "Tragaperras",
+    "name": "Vikingos",
     "type": {
       "id": 3,
-      "name": "Jackpots"
+      "name": "Slots"
     },
     "color": {
       "id": 3,
-      "name": "Oro"
+      "name": "gold"
     },
-    "image": ""
+    "image": "vikingos"
   },
   {
     "id": "5fd92febc621600d1f8496e1",
-    "name": "Ruleta Europea",
+    "name": "Temple of Wealth",
     "type": {
       "id": 2,
       "name": "Ruleta"
@@ -36,11 +36,11 @@
       "id": 2,
       "name": "Rojo"
     },
-    "image": ""
+    "image": "temple_of_wealth"
   },
   {
     "id": "5fd9f5d0f1ba77d87e6c2b93",
-    "name": "Ruleta Francesa",
+    "name": "Temple of Wealth",
     "type": {
       "id": 2,
       "name": "Ruleta"
@@ -49,7 +49,7 @@
       "id": 2,
       "name": "Rojo"
     },
-    "image": ""
+    "image": "temple_of_wealth"
   },
   {
     "id": "5fd951c773aa9ebd86557317",
@@ -62,7 +62,7 @@
       "id": 1,
       "name": "Rosa"
     },
-    "image": ""
+    "image": "tiki_tumble"
   },
   {
     "id": "5fd9f5c60daed263a277bd6b",
@@ -75,24 +75,24 @@
       "id": 1,
       "name": "Rosa"
     },
-    "image": ""
+    "image": "tiki_tumble"
   },
   {
     "id": "5fd9f5f921d569a3f50b5bf6",
-    "name": "Tragaperras 2",
+    "name": "Vikingos 2",
     "type": {
       "id": 3,
-      "name": "Jackpots"
+      "name": "Slots"
     },
     "color": {
       "id": 3,
       "name": "Oro"
     },
-    "image": ""
+    "image": "vikingos"
   },
   {
     "id": "5fd9f5d94c4747668b9e0b66",
-    "name": "Ruleta Americana",
+    "name": "Temple of Wealth",
     "type": {
       "id": 2,
       "name": "Ruleta"
@@ -101,32 +101,32 @@
       "id": 2,
       "name": "Rojo"
     },
-    "image": ""
+    "image": "temple_of_wealth"
   },
   {
     "id": "5fd9f5fd88298f1a3cd50c2d",
-    "name": "Tragaperras 3",
+    "name": "Vikingos 3",
     "type": {
       "id": 3,
-      "name": "Jackpots"
+      "name": "Slots"
     },
     "color": {
       "id": 3,
       "name": "Oro"
     },
-    "image": ""
+    "image": "vikingos"
   },
   {
     "id": "5fd9f601a4c6a1360d914ed6",
-    "name": "Tragaperras 4",
+    "name": "Vikingos 4",
     "type": {
       "id": 3,
-      "name": "Jackpots"
+      "name": "Slots"
     },
     "color": {
       "id": 3,
       "name": "Oro"
     },
-    "image": ""
+    "image": "vikingos"
   }
 ]

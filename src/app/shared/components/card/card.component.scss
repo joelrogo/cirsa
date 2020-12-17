@@ -22,6 +22,10 @@
   }
 
   .c-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     background-color: $secondary-color;
     margin: 0 10px 10px 10px;

@@ -4,7 +4,6 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
   selector: 'ng-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NotFoundComponent implements OnInit {

@@ -1,11 +1,11 @@
 <div class="c-card" (click)="cardClickEvent()">
   <div class="c-card__header">
-    <p>{{ cardTitle }}</p>
+    <p>{{ game.type.name }}</p>
   </div>
   <div class="c-card__content">
     <ng-content></ng-content>
 
-    <div class="c-card__contentImage" [style]="'background-image: url(' + cardBackground + ');'">
+    <div class="c-card__contentImage" [style]="'background-image: url(assets/images/' + game.image + '.png);'">
     </div>
   </div>
 </div>

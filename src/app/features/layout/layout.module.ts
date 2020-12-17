@@ -25,5 +25,6 @@ import { WalletModule } from '../games/components/wallet/wallet.module';
     WalletModule,
     SharedModule,
   ],
+  exports: [HeaderComponent, FooterComponent]
 })
 export class LayoutModule {}

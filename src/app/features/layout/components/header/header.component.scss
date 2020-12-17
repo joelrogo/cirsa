@@ -2,14 +2,25 @@
 @import "/src/scss/abstracts/functions";
 @import "/src/scss/components/mat-icon-button";
 
+:host {
+  width: 100%;
+}
+
 .c-header {
   flex: 2 0 auto;
   height: rem(50px);
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: rem(10px);
+  background-color: $primary-color;
 
   img {
     width: 100px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 }

@@ -7,6 +7,7 @@ import {
 import {
   ActivatedRoute
 } from '@angular/router';
+import { Game } from '@app/core/models/game.model';
 import { GamesService } from '@app/core/services/games.service';
 
 @Component({
@@ -16,7 +17,7 @@ import { GamesService } from '@app/core/services/games.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GameDetailComponent implements OnInit {
-  title: string;
+  public game: Game;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -26,7 +27,7 @@ export class GameDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params.id;
-    this.title = this.gamesService.getGameById(id).name;
+    this.game = this.gamesService.getGameById(id);
     this.cd.detectChanges();
   }
 }
