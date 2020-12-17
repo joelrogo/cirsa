@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
 import { TranslocoCurrencyPipe, TranslocoLocaleModule } from '@ngneat/transloco-locale';
 
@@ -8,6 +9,7 @@ import { TranslocoCurrencyPipe, TranslocoLocaleModule } from '@ngneat/transloco-
   declarations: [],
   imports: [
     CommonModule,
+    RouterModule,
     TranslocoLocaleModule.init({
       langToLocaleMapping: {
         en: 'en-US',
@@ -33,6 +35,6 @@ import { TranslocoCurrencyPipe, TranslocoLocaleModule } from '@ngneat/transloco-
       },
     }),
   ],
-  exports: [CommonModule, FormsModule, ReactiveFormsModule, TranslocoModule, TranslocoCurrencyPipe],
+  exports: [CommonModule, FormsModule, ReactiveFormsModule, TranslocoModule, TranslocoCurrencyPipe, RouterModule],
 })
 export class SharedModule {}

@@ -3,6 +3,7 @@
 
 .c-wallet {
   display: flex;
+  cursor: pointer;
 
   .c-wallet__input {
     background-color: $primary-color-background;
@@ -11,6 +12,10 @@
     border-radius: 25px;
     padding: 5px;
     font-weight: bold;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &::before {
