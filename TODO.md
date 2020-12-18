@@ -1,5 +1,2 @@
-# Spectator borrar o hacer algun test
 # Download Dripicons font
-
-# Coin animation
-# Review router animations
+# Need to build and push /dist to git? --> Agus
