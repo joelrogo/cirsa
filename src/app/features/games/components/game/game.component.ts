@@ -21,7 +21,10 @@ import { Game, Games } from '@app/core/models/game.model';
         animate('0.3s ease'),
       ]),
       transition(':leave', [
-        animate('0.3s ease', style({ transform: 'scale(0)', opacity: 1, position: 'relative' })),
+        animate(
+          '0.3s ease',
+          style({ transform: 'scale(0)', opacity: 1, position: 'relative' })
+        ),
       ]),
     ]),
   ],

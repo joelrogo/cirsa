@@ -10,7 +10,7 @@ import { WalletComponent } from '../wallet/wallet.component';
   selector: 'ng-collect-coins',
   templateUrl: './collect-coins.component.html',
   styleUrls: ['./collect-coins.component.scss'],
-  animations: [collectCoinsAnimation]
+  animations: [collectCoinsAnimation],
 })
 export class CollectCoinsComponent implements OnInit {
   @ViewChild(WalletComponent) wallet: WalletComponent;
@@ -20,7 +20,7 @@ export class CollectCoinsComponent implements OnInit {
   constructor(
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer,
-    private walletStore: WalletStore,
+    private walletStore: WalletStore
   ) {}
 
   ngOnInit(): void {
@@ -33,10 +33,10 @@ export class CollectCoinsComponent implements OnInit {
   coinClick(): void {
     this.animate = !this.animate;
     this.generatedCoins = Math.floor(Math.random() * 3500 + 1500);
-    this.walletStore.addCoins(this.generatedCoins);
   }
 
-  animationEnds(event): void {
+  animationEnds(): void {
     this.animate = false;
+    this.walletStore.addCoins(this.generatedCoins);
   }
 }

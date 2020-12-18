@@ -3,13 +3,13 @@
     <h1>{{ t("collect.coins") }}</h1>
     <div
       [@collectCoinsAnimation]="animate"
-      (@collectCoinsAnimation.done)="animationEnds($event)"
+      (@collectCoinsAnimation.done)="animationEnds()"
       class="c-collectCoins__coin"
       (click)="coinClick()"
     >
       <mat-icon svgIcon="coin-base" class="collect_coin"></mat-icon>
       <span *ngIf="animate" class="collect_message"
-        >+ {{ generatedCoins }} coins</span
+        >+ {{ generatedCoins | number }} {{ t("coins") }}</span
       >
     </div>
   </div>

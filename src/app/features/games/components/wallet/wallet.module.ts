@@ -7,11 +7,7 @@ import { WalletComponent } from './wallet.component';
 
 @NgModule({
   declarations: [WalletComponent],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    SharedModule
-  ],
-  exports: [WalletComponent]
+  imports: [CommonModule, MatIconModule, SharedModule],
+  exports: [WalletComponent],
 })
 export class WalletModule {}

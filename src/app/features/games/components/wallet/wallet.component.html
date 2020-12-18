@@ -1,3 +1,7 @@
-<div class="c-wallet" routerLink="/games/collect-coins">
-  <div class="c-wallet__input">{{ coins | number }}</div>
+<div [@walletAnimation]="animate" (@walletAnimation.done)="animationEnds()">
+  <div class="c-wallet" routerLink="/games/collect-coins">
+    <div class="c-wallet__input">
+      <span>{{ coins | number }}</span>
+    </div>
+  </div>
 </div>

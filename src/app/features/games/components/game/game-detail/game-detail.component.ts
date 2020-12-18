@@ -2,11 +2,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  OnInit
+  OnInit,
 } from '@angular/core';
-import {
-  ActivatedRoute
-} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Game } from '@app/core/models/game.model';
 import { GamesService } from '@app/core/services/games.service';
 
@@ -14,7 +12,7 @@ import { GamesService } from '@app/core/services/games.service';
   selector: 'ng-game-detail',
   templateUrl: './game-detail.component.html',
   styleUrls: ['./game-detail.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GameDetailComponent implements OnInit {
   public game: Game;

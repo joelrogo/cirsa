@@ -3,11 +3,10 @@ import {
   group,
   keyframes,
   query,
-  sequence,
   state,
   style,
   transition,
-  trigger,
+  trigger
 } from '@angular/animations';
 export const collectCoinsAnimation = trigger('collectCoinsAnimation', [
   state('true', style({ position: 'relative' })),
@@ -24,10 +23,10 @@ export const collectCoinsAnimation = trigger('collectCoinsAnimation', [
             }),
             style({
               position: 'relative',
-              top: '-350px',
+              top: '-300px',
               transform: 'rotateY(360deg)',
-              filter: 'brightness(1.4)',
             }),
+            
           ])
         ),
       ]),
@@ -42,7 +41,7 @@ export const collectCoinsAnimation = trigger('collectCoinsAnimation', [
             }),
             style({
               position: 'relative',
-              top: '-350px',
+              top: '-300px',
             }),
           ])
         ),

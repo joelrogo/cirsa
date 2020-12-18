@@ -16,7 +16,7 @@
   background-color: $primary-color;
 
   img {
-    width: 100px;
+    width: rem(100px);
     cursor: pointer;
 
     &:focus {

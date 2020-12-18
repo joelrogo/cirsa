@@ -1,10 +1,4 @@
 {
-  "email": "Correo",
-  "password": "Contraseña",
-  "is.required": "Este campo es requerido",
-  "email.valid.address": "Introduce una dirección valida",
-  "login.title": "Iniciar sesión",
-  "login.button": "Entrar",
   "language.spanish": "Español",
   "language.english": "Inglés",
   "games": "Todos los juegos",
@@ -17,5 +11,6 @@
   "all": "Todos",
   "novelties": "Novedades",
   "roulettes": "Ruletas",
-  "slots": "Slots"
+  "slots": "Slots",
+  "coins": " monedas"
 }

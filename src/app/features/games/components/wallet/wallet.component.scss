@@ -7,10 +7,10 @@
 
   .c-wallet__input {
     background-color: $primary-color-background;
-    min-width: 150px;
+    min-width: rem(150px);
     text-align: center;
-    border-radius: 25px;
-    padding: 5px;
+    border-radius: rem(25px);
+    padding: rem(5px);
     font-weight: bold;
   }
 
@@ -21,9 +21,9 @@
   &::before {
     content: ' ';
     background-image: url('/assets/images/coin.svg');
-    background-size: 28px 28px;
-    height: 28px;
-    width: 28px;
+    background-size: rem(28px) rem(28px);
+    height: rem(28px);
+    width: rem(28px);
     transform: translateX(20px);
   }
 }

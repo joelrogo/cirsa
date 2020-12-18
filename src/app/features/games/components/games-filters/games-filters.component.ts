@@ -1,7 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { GAME_COLORS, GAME_TYPES } from '@app/core/models/game.model';
-import { takeUntil } from 'rxjs/operators';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
+import { GAME_TYPES } from '@app/core/models/game.model';
 
 @Component({
   selector: 'ng-games-filters',
